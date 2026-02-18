@@ -1,0 +1,5 @@
+MICROSOFT_CLIENT_ID=your_client_id
+MICROSOFT_CLIENT_SECRET=your_client_secret
+MICROSOFT_TENANT_ID=your_tenant_id
+MICROSOFT_API_URL=https://outlook.office365.com/calendar/view/workweek
+
