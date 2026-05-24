@@ -8,15 +8,12 @@ load_dotenv()
 CLIENT_ID = os.getenv('MICROSOFT_CLIENT_ID')
 CLIENT_SECRET = os.getenv('MICROSOFT_CLIENT_SECRET')
 TENANT_ID = os.getenv('MICROSOFT_TENANT_ID')
-AUTH_URL = f"https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/token"
+
+# Microsoft Graph API base URL for calendar events
 MICROSOFT_API_URL = "https://graph.microsoft.com/v1.0/me/events"
 
+# OAuth scopes required for calendar read/write access
+SCOPES = ["Calendars.ReadWrite"]
 
-# config.py
-import os
-from dotenv import load_dotenv
-
-# Load environment variables from the .env file
-load_dotenv()
-
-MICROSOFT_API_URL = os.getenv("MICROSOFT_API_URL")
+# File path for persisting the MSAL token cache between runs
+TOKEN_CACHE_FILE = "token_cache.json"
